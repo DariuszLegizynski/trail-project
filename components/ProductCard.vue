@@ -1,9 +1,9 @@
 <template>
-  <fragment>
-        <h2 class="font-bold p-4 border-b border-gray-100">{{title}}</h2>
-        <img :src="thumbnail" :alt="category" />
-        <span>{{description}}</span>
-      </fragment>
+  <section class="card">
+    <h2 class="font-bold p-4 border-b border-gray-100">{{ title }}</h2>
+    <img :src="thumbnail" :alt="category" />
+    <p class="text-xs p-4 leading-5">{{ description }}</p>
+  </section>
 </template>
 
 <script>
@@ -11,16 +11,20 @@ export default {
   props: {
     description: {
       type: String,
-      default: "" },
+      default: '',
+    },
     thumbnail: {
       type: String,
-      default: "" },
+      default: '',
+    },
     title: {
       type: String,
-      default: "" },
+      default: '',
+    },
     category: {
       type: String,
-      default: "" },
-  }
+      default: '',
+    },
+  },
 }
 </script>
