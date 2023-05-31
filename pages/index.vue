@@ -4,7 +4,7 @@
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
-    <LoadingScreen class="flex-center" v-if="$fetchState.pending" />
+    <LoadingScreen v-if="$fetchState.pending" />
     <article
       v-else
       class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
