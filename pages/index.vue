@@ -1,12 +1,11 @@
 <template>
   <main>
     <h1
-      class="my-8 inline-block w-full text-dark font-bold capitalize text-3xl text-center"
-    >
+      class="my-8 inline-block w-full text-dark font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
     <article
-      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 md:gap-y-16"
+      class="columns-2 md:columns-3 lg:columns-4"
     >
       <ProductCard
         v-for="(product, index) in products"
