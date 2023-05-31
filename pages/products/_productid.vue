@@ -4,10 +4,10 @@
     <section v-else class="p-4">
       <section class="grid grid-cols-5">
         <div v-for="(image, index) in productImages" :key="index">
-          <img :src="image" alt="product image" @click="selectedImageIndex = index" />
+          <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
         </div>
         <div class="grid col-span-5">
-          <img :src="selectedImage" alt="big product image" />
+          <img class="h-80" :src="selectedImage" alt="big product image" />
         </div>
       </section>
       <section class="grid grid-cols-1 justify-items-center">
