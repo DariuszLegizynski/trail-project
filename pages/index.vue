@@ -4,15 +4,19 @@
       class="my-8 inline-block w-full text-dark font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
+    <Loading v-if="$fetchState.pending" />
     <article
+      v-else
       class="columns-2 md:columns-3 lg:columns-4"
     >
       <ProductCard
-        v-for="(product, index) in products"
-        :key="index"
+        v-for="product in products"
+        :key="product.id"
+        :productid="product.id"
         :description="product.description"
         :category="product.category"
         :thumbnail="product.thumbnail"
+        :brand="product.brand"
         :title="product.title"
       />
     </article>
@@ -32,6 +36,7 @@ export default {
   async fetch() {
     await this.getProducts()
   },
+  fetchDelay: 1000,
   methods: {
     async getProducts() {
       const data = axios.get('https://dummyjson.com/products')
