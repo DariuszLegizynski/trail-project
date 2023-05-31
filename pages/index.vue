@@ -1,13 +1,11 @@
 <template>
-  <article class="h-screen w-full flex justify-between bg-red-50">
-    <section>
-      <div v-for="(product, index) in products" :key="index" class="rounded shadow p-2 bg-blue-300">
-        <h2>{{product.title}}</h2>
-        <img :src="product.thumbnail" :alt="product.category" />
-        <span>{{product.description}}</span>
-      </div>
-    </section>
-  </article>
+  <main class="test">
+    <article class="mt-8 grid lg:grid-cols-6 gap-10">
+      <section v-for="(product, index) in products" :key="index" class="card">
+        <ProductCard :description="product.description" :category="product.category" :thumbnail="product.thumbnail" :title="product.title" />
+        </section>
+    </article>
+  </main>
 </template>
 
 <script>
