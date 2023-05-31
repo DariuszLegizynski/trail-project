@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1
-      class="my-8 inline-block w-full text-dark font-bold capitalize text-3xl text-center">
+      class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
     <LoadingScreen v-if="$fetchState.pending" />
