@@ -1,7 +1,6 @@
 <template>
   <article>
-    <LoadingScreen v-if="$fetchState.pending" />
-    <section v-else class="p-4">
+    <section v-if="product" class="p-4">
       <section class="grid grid-cols-5">
         <div v-for="(image, index) in productImages" :key="index">
           <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
@@ -17,7 +16,7 @@
         <NuxtLink class="mt-16" to="/">&larr; Back</NuxtLink>
       </section>
     </section>
-    
+    <LoadingScreen v-else />
   </article>
 </template>
 
@@ -25,14 +24,15 @@
 import axios from 'axios'
 
 export default {
+  async asyncData({params}) {
+    const {data} = await axios.get(`https://dummyjson.com/products/${params.productid}`)
+      return {product: data}
+  },
   data() {
     return {
       product: null,
       selectedImageIndex: 0,
     }
-  },
-  async fetch() {
-    await this.getSingleProduct()
   },
   computed: {
     productImages() {
@@ -40,15 +40,6 @@ export default {
     },
     selectedImage() {
       return this.productImages[this.selectedImageIndex]
-    }
-  },
-  methods: {
-    async getSingleProduct() {
-      const data = axios.get(
-        `https://dummyjson.com/products/${this.$route.params.productid}`
-      )
-      const result = await data
-      this.product = result.data
     }
   },
 }
