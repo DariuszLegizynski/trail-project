@@ -44,17 +44,17 @@ export default {
     /* module options */
     locales: [
       {
-        name: 'English(US)',
-        code: 'en',
-        iso: 'en-US',
-        file: 'en-US.js',
-      },
-      {
         name: 'Deutsch(AT)',
         code: 'de',
         iso: 'de-AT',
-        file: 'de-AT.js',
+        file: 'de-AT.json',
       },
+      {
+        name: 'English(US)',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.json',
+      }
     ],
     defaultLocale: 'en',
     vueI18n: {
