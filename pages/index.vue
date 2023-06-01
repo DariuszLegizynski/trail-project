@@ -4,9 +4,8 @@
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
-    <LoadingScreen v-if="$fetchState.pending" />
     <article
-      v-else
+    v-if="products"
       class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
     >
       <ProductCard
@@ -20,6 +19,7 @@
         :title="product.title"
       />
     </article>
+    <LoadingScreen v-else />
   </main>
 </template>
 
@@ -28,23 +28,14 @@ import axios from 'axios'
 
 export default {
   name: 'IndexPage',
+  async asyncData() {
+    const {data} = await axios.get('https://dummyjson.com/products')
+      return {products: data.products}
+  },
   data() {
     return {
       products: [],
     }
-  },
-  async fetch() {
-    await this.getProducts()
-  },
-  methods: {
-    async getProducts() {
-      const data = axios.get('https://dummyjson.com/products')
-      const result = await data
-
-      result.data.products.forEach((product) => {
-        this.products.push(product)
-      })
-    },
   },
 }
 </script>
