@@ -2,7 +2,7 @@
   <main>
     <h1
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
-      {{ $t('homePage.hello')}}:
+      {{ $t('home.hello')}}:
     </h1>
     <LangSwitcher />
     <article

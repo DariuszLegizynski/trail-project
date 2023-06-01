@@ -13,7 +13,7 @@
         <h1 class="text-center font-normal text-2xl pt-4">{{ product.title }}</h1>
         <span class="font-light py-4">{{ product.description }}</span>
         <p class="font-thick">{{ product.price }} €</p>
-        <NuxtLink class="mt-16" :to="{name: 'index___en'}">&larr; {{$t('productPage.productButton')}}</NuxtLink>
+        <NuxtLink class="mt-16" :to="{name: `index___${$i18n.locale}`}">&larr; {{$t('product.button')}}</NuxtLink>
       </section>
     </section>
     <LoadingScreen v-else />

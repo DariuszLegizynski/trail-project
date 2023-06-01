@@ -1,11 +1,11 @@
 export default {
-  homePage: {
+  home: {
     hello: "Welcome, take a look at our products",
   },
-  productPage: {
-    productButton: "Back"
+  product: {
+    button: "Back"
   },
-  languageSwitch: {
+  language: {
     text: "Switch Language"
   }
 }

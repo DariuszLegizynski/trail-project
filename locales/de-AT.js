@@ -1,11 +1,11 @@
 export default {
-  homePage: {
+  home: {
     hello: 'Griaß Di, schaue dir unsere Produkte an',
   },
-  productPage: {
-    productButton: 'Zurück',
+  product: {
+    button: 'Zurück',
   },
-  languageSwitch: {
+  language: {
     text: "Sprache Ändern"
   }
 }

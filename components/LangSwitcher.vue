@@ -1,6 +1,6 @@
 <template>
     <div>
-      {{$t('languageSwitch.text')}}:
+      {{$t('language.text')}}:
       <select v-model="$i18n.locale">
         <option
           v-for="lang in availableLocales"
