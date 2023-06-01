@@ -12,18 +12,3 @@
       </select>
     </div>
 </template>
-
-<script>
-export default {
-  computed: {
-    availableLocales() {
-      console.log(this.$i18n.availableLocales)
-      console.log(this.$i18n.locale)
-      return this.$i18n.locales
-    }
-  },
-  mounted() {
-    console.log(this.$i18n)
-  }
-}
-</script>
