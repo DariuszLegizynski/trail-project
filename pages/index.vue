@@ -1,10 +1,11 @@
 <template>
   <main>
+    <LangSwitcher />
     <h1
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       {{ $t('home.hello')}}:
     </h1>
-    <LangSwitcher />
+    
     <article
     v-if="products"
       class="columns-2 md:columns-3 lg:columns-4 gap-x-0"

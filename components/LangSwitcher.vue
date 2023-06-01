@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex justify-end text-xs">
       {{$t('language.text')}}:
       <select v-model="$i18n.locale">
         <option
