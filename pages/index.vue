@@ -1,13 +1,13 @@
 <template>
   <main>
     <h1
-      class="my-8 inline-block w-full text-dark font-bold capitalize text-3xl text-center">
+      class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       Take a look at our products:
     </h1>
-    <Loading v-if="$fetchState.pending" />
+    <LoadingScreen v-if="$fetchState.pending" />
     <article
       v-else
-      class="columns-2 md:columns-3 lg:columns-4"
+      class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
     >
       <ProductCard
         v-for="product in products"
@@ -36,7 +36,6 @@ export default {
   async fetch() {
     await this.getProducts()
   },
-  fetchDelay: 1000,
   methods: {
     async getProducts() {
       const data = axios.get('https://dummyjson.com/products')
