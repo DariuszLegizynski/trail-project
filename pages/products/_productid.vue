@@ -7,7 +7,7 @@
           <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
         </div>
         <div class="grid col-span-5">
-          <img class="h-80" :src="selectedImage" alt="big product image" />
+          <img class="h-80 object-contain" :src="selectedImage" alt="big product image" />
         </div>
       </section>
       <section class="grid grid-cols-1 justify-items-center">
