@@ -17,9 +17,7 @@ export default {
   ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/main.css',
-  ],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -37,15 +35,44 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+  i18n: {
+    /* module options */
+    locales: [
+      {
+        name: 'English(US)',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+      },
+      {
+        name: 'Deutsch(AT)',
+        code: 'de',
+        iso: 'de-AT',
+        file: 'de-AT.js',
+      },
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    switchLocalePath: '/:lang/:route',
+    detectBrowserLanguage: {
+      useCookie: true,
+    },
+    langDir: 'locales',
+    lazy: true,
   },
+
+    // Axios module configuration: https://go.nuxtjs.dev/config-axios
+    axios: {
+      // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+      baseURL: '/',
+    },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

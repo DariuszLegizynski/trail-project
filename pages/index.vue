@@ -2,8 +2,9 @@
   <main>
     <h1
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
-      Take a look at our products:
+      {{ $t('homePage.hello')}}:
     </h1>
+    <LangSwitcher />
     <article
     v-if="products"
       class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
@@ -27,6 +28,9 @@
 import axios from 'axios'
 
 export default {
+  i18n: {
+      inject: true
+    },
   name: 'IndexPage',
   async asyncData() {
     const {data} = await axios.get('https://dummyjson.com/products')
