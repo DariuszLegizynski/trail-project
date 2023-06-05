@@ -7,7 +7,8 @@
     </h1>
     
     <article
-    v-if="products"
+      v-if="products"
+      data-cy="item-list"
       class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
     >
       <ProductCard
