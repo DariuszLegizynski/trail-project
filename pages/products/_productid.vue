@@ -1,7 +1,7 @@
 <template>
   <article>
     <h1
-      class="my-8 sm:my-16 font-brixtonRg inline-block w-full capitalize text-4xl text-center text-sky-400">
+      class="p-8 sm:my-16 font-brixtonRg inline-block w-full capitalize text-4xl text-center text-sky-400">
       {{ $t('product.hello')}}:
     </h1>
     <section v-if="product" class="py-2 px-4 sm:p-4 md:grid md:grid-cols-2">
