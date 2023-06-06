@@ -2,14 +2,14 @@
   <main>
     
     <h1
-      class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
+      class="my-8 body-font font-brixtonRg inline-block w-full capitalize text-3xl text-center text-sky-400">
       {{ $t('home.hello')}}:
     </h1>
     
     <article
       v-if="products"
       data-cy="item-list"
-      class="columns-2 md:columns-3 lg:columns-4 gap-x-0"
+      class="px-4 columns-1 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5"
     >
       <ProductCard
         v-for="product in products"
@@ -30,9 +30,6 @@
 import axios from 'axios'
 
 export default {
-  // i18n: {
-  //     inject: true
-  //   },
   name: 'IndexPage',
   async asyncData() {
     const {data} = await axios.get('https://dummyjson.com/products')

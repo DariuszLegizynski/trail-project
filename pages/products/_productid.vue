@@ -10,9 +10,9 @@
         </div>
       </section>
       <section class="grid grid-cols-1 justify-items-center">
-        <h1 class="text-center font-normal text-2xl pt-4">{{ product.title }}</h1>
+        <h1 class="text-center font-brixtonRg text-2xl pt-4">{{ product.title }}</h1>
         <span class="font-light py-4">{{ product.description }}</span>
-        <p class="font-thick">{{ product.price }} €</p>
+        <p class="font-montserrat">{{ product.price }} €</p>
         <NuxtLink data-cy="link-back" class="mt-16" :to="localePath('/')">&larr; {{$t('product.button')}}</NuxtLink>
       </section>
     </section>
