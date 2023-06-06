@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('http://localhost:3000/')
   })
   it('Main shop section', () => {
     cy.get('[data-cy=item-list]').children().should('have.length.at.least', 5)
@@ -11,7 +11,9 @@ describe('My First Test', () => {
     cy.get('[data-cy=item-list]').children().should('have.length.at.least', 5)
   })
   it('Change language', () => {
-    const langTitleDE="Griaß Di, schaue dir unsere Produkte an"
+    const langTitleDE='Griaß Di, schaue dir unsere Produkte an:'
+    const langTitleEN='Welcome, Take A Look At Our Products'
+    cy.get('[data-cy=lang-title]').contains(langTitleEN)
     cy.get('[data-cy=lang-change]').select(1)
     cy.get('[data-cy=lang-title]').contains(langTitleDE)
   })

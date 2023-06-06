@@ -1,7 +1,7 @@
 <template>
-    <div data-cy="lang-title" class="flex justify-end text-xs">
-      {{$t('language.text')}}:
-      <select v-model="$i18n.locale" data-cy="lang-change">
+    <div class="flex justify-end text-xs">
+      <p data-cy="lang-title">{{$t('language.text')}}:</p>
+      <select id="name" v-model="$i18n.locale" data-cy="lang-change">
         <option
           v-for="lang in $i18n.locales"
           :key="lang.iso"
@@ -12,3 +12,11 @@
       </select>
     </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    console.log(this.$i18n)
+  }
+}
+</script>
