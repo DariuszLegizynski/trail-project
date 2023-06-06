@@ -12,14 +12,14 @@
     <img
       :src="thumbnail"
       :alt="`${brand} ${category}`"
-      class="margin-0-auto p-4 rounded-3xl group-hover:scale-105 transition ease-in-out"
+      class="margin-0-auto min-w-[300px] h-auto p-4 rounded-3xl group-hover:scale-105 transition ease-in-out"
     />
     <h2
-      class="font-brixtonRg text-sky-400 text-3xl px-4 py-2 text-left group-hover:underline"
+      class="font-brixtonRg text-sky-400 text-2xl px-4 py-2 text-left group-hover:underline"
     >
       {{ title }}
     </h2>
-    <p class="font-montserrat text-2xl px-4 py-2">{{ description }}</p>
+    <p class="font-montserrat text-base px-4 py-2">{{ description }}</p>
   </NuxtLink>
 </template>
 

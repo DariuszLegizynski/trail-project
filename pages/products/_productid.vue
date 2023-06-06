@@ -1,7 +1,7 @@
 <template>
   <article>
     <section v-if="product" class="p-4">
-      <section data-cy="gallery-list" class="grid grid-cols-5">
+      <section data-cy="gallery-list" class="grid justify-items-center grid-cols-5">
         <div v-for="(image, index) in productImages" :key="index">
           <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
         </div>
