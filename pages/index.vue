@@ -1,6 +1,6 @@
 <template>
   <main>
-    <LangSwitcher />
+    
     <h1
       class="my-8 inline-block w-full font-bold capitalize text-3xl text-center">
       {{ $t('home.hello')}}:
@@ -30,9 +30,9 @@
 import axios from 'axios'
 
 export default {
-  i18n: {
-      inject: true
-    },
+  // i18n: {
+  //     inject: true
+  //   },
   name: 'IndexPage',
   async asyncData() {
     const {data} = await axios.get('https://dummyjson.com/products')
