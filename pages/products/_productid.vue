@@ -1,11 +1,13 @@
 <template>
   <article>
     <section v-if="product" class="p-4">
-      <section data-cy="gallery-list" class="grid justify-items-center grid-cols-5">
-        <div v-for="(image, index) in productImages" :key="index">
-          <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
+      <section data-cy="gallery-list" class="grid gap-x-4 grid-cols-5 sm:gap-x-0 sm:gap-y-2 sm:grid-cols-1">
+        <div class="col-span-1 sm:grid sm:justify-items-center sm:grid-cols-5">
+          <div v-for="(image, index) in productImages" :key="index">
+            <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
+          </div>
         </div>
-        <div class="grid col-span-5">
+        <div class="grid col-span-4 sm:justify-items-center sm:col-span-5">
           <img data-cy="image" class="h-80 object-contain" :src="selectedImage" alt="big product image" />
         </div>
       </section>
