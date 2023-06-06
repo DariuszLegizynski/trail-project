@@ -1,11 +1,9 @@
 <template>
   <main>
-    
     <h1
-      class="my-8 body-font font-brixtonRg inline-block w-full capitalize text-3xl text-center text-sky-400">
+      class="my-8 sm:my-16 font-brixtonRg inline-block w-full capitalize text-3xl text-center text-sky-400">
       {{ $t('home.hello')}}:
     </h1>
-    
     <article
       v-if="products"
       data-cy="item-list"
