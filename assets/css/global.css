@@ -1,9 +1,9 @@
 .card {
-  @apply m-4 rounded-2xl bg-white border border-gray-200 shadow-md overflow-hidden;
+  @apply flex-center my-4 first:mt-0 last:mb-0 rounded-2xl bg-white border border-gray-200 shadow-md overflow-hidden;
 }
 
 .flex-center {
-  @apply flex items-center justify-center
+  @apply flex flex-col items-center
 }
 
 .margin-0-auto {
