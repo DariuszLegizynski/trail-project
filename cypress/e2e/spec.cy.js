@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
   it('Main shop section', () => {
     cy.get('[data-cy=item-list]').children().should('have.length.at.least', 5)
