@@ -1,19 +1,19 @@
 <template>
   <article>
     <section v-if="product" class="p-4">
-      <section class="grid grid-cols-5">
+      <section data-cy="gallery-list" class="grid grid-cols-5">
         <div v-for="(image, index) in productImages" :key="index">
           <img class="h-16 w-auto object-contain" :src="image" alt="product image" @click="selectedImageIndex = index" />
         </div>
         <div class="grid col-span-5">
-          <img class="h-80 object-contain" :src="selectedImage" alt="big product image" />
+          <img data-cy="image" class="h-80 object-contain" :src="selectedImage" alt="big product image" />
         </div>
       </section>
       <section class="grid grid-cols-1 justify-items-center">
         <h1 class="text-center font-normal text-2xl pt-4">{{ product.title }}</h1>
         <span class="font-light py-4">{{ product.description }}</span>
         <p class="font-thick">{{ product.price }} €</p>
-        <NuxtLink class="mt-16" :to="localePath('/')">&larr; {{$t('product.button')}}</NuxtLink>
+        <NuxtLink data-cy="link-back" class="mt-16" :to="localePath('/')">&larr; {{$t('product.button')}}</NuxtLink>
       </section>
     </section>
     <LoadingScreen v-else />
