@@ -109,7 +109,6 @@ export default {
             trigger: '.title',
             start: '300 400',
             end: '+=100 +=200',
-            // markers:true
           },
         })
         .fromTo(
@@ -132,7 +131,6 @@ export default {
             trigger: refItemList,
             start: 'top 400',
             end: 'bottom top',
-            markers: true
           },
         })
         .fromTo(

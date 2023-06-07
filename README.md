@@ -65,4 +65,8 @@ Dariusz Legizynski - Initial work.
 This project is licensed under the MIT License - see the [LICENSE.md] file for details.
 
 [TrialProject]: https://nuxt-trial-73c66.web.app/
+<<<<<<< HEAD
 [LICENSE.md]: https://github.com/DariuszLegizynski/trail-project/blob/main/LICENSE
+=======
+[LICENSE.md]: https://github.com/DariuszLegizynski/trail-project/blob/main/LICENSE
+>>>>>>> f73aa512bf0c0d1d8497f2aa1160233f25b06afc
