@@ -7,9 +7,9 @@
       v-for="locale in availableLocales"
       :key="locale.code"
       data-cy="lang-change"
-      class="bg-sky-400 text-gray-50"
+      class="bg-sky-400 text-gray-50 after:content-['|'] last:after:content-['']"
       :to="switchLocalePath(locale.code)"
-      >&nbsp;{{ locale.code }} |
+      >&nbsp;{{ locale.code }}
     </NuxtLink>
   </section>
 </template>
