@@ -1,8 +1,8 @@
 <template>
   <main>
-    <div class="flex-center">
+    <div class="flex-center mt-16 sm:mt-4 h-96">
       <h1
-        class="title p-8 h-64 sm:my-16 font-brixtonRg inline-block w-full capitalize text-4xl text-center text-sky-400"
+        class="title p-8 sm:my-16 font-brixtonRg inline-block w-full capitalize text-4xl text-center text-sky-400"
       >
         {{ $t('home.hello') }}:
       </h1>
@@ -109,6 +109,7 @@ export default {
             trigger: '.title',
             start: '300 400',
             end: '+=100 +=200',
+            // markers:true
           },
         })
         .fromTo(
@@ -129,8 +130,9 @@ export default {
         .timeline({
           scrollTrigger: {
             trigger: refItemList,
-            start: 'top +=400',
+            start: 'top 400',
             end: 'bottom top',
+            markers: true
           },
         })
         .fromTo(
