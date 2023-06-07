@@ -49,10 +49,22 @@ export default {
   mounted() {
     gsap.registerPlugin(ScrollTrigger)
 
+    this.moveIcon()
     this.hideIcon()
     this.scrollGallery()
   },
   methods: {
+    moveIcon() {
+      const refIcon = this.$refs.iconItem
+
+      gsap.to(refIcon,
+      {
+        duration: 1.2,
+        y: "100%",
+        ease: 'power2',
+        repeat: -1
+      })
+    },
     hideIcon() {
       const refIcon = this.$refs.iconItem
 
